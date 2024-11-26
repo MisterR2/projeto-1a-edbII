@@ -61,12 +61,12 @@ No* carregar_livros(const char* nome_arquivo, No* raiz) {
 
 void exibir_arvore(No* raiz) {
     if (raiz != NULL) {
-        exibir_arvore(raiz->esquerda); // Exibe subárvore esquerda
+        exibir_arvore(raiz->esquerda); 
         printf("\nCódigo: %d, Título: %s, Autor: %s, Gênero: %s, Ano: %d, Editora: %s, Páginas: %d\n",
                raiz->livro.codigo, raiz->livro.titulo, raiz->livro.autor, 
                raiz->livro.genero, raiz->livro.ano, raiz->livro.editora, 
                raiz->livro.numero_paginas);
-        exibir_arvore(raiz->direita);  // Exibe subárvore direita
+        exibir_arvore(raiz->direita);
     }
 }
 

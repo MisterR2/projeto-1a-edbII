@@ -79,8 +79,12 @@ int main() {
 
             case 3: {
                 char genero[50];
-                printf("Digite o gênero a buscar: ");
-                scanf("%49s", genero);
+                printf("Digite o gênero a buscar (Acentos serão considerados): ");
+                fflush(stdin);
+                fgets(genero, sizeof(genero), stdin);
+
+                genero[strcspn(genero, "\n")] = '\0';
+
                 printf("Livros do gênero %s:\n", genero);
                 buscar_por_genero(raiz, genero);
                 break;
