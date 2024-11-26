@@ -70,7 +70,6 @@ void exibir_arvore(No* raiz) {
     }
 }
 
-
 void liberar_arvore(No* raiz) {
     if (raiz) {
         liberar_arvore(raiz->esquerda);
